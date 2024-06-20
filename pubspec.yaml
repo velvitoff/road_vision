@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_vision: ^1.1.4
+  camera: ^0.11.0+1
   get_it: ^7.7.0
   flutter_bloc: ^8.1.6
 
@@ -62,9 +63,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/yolo8m-augmented-100epochs-73per_float16.tflite
+    - assets/yolo8m-augmented-100epochs-73per_float16.txt
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

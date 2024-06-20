@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vision/flutter_vision.dart';
+import 'package:camera/camera.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +31,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {}
+  Future<void> _incrementCounter() async {
+    FlutterVision vision = FlutterVision();
+    await vision.loadYoloModel(
+      labels: 'assets/yolo8m-augmented-100epochs-73per_float16.txt',
+      modelPath: 'assets/yolo8m-augmented-100epochs-73per_float16.tflite',
+      modelVersion: "yolov8",
+      quantization: false,
+      numThreads: 1,
+      useGpu: false,
+    );
+
+    final result = await vision.yoloOnFrame(
+        bytesList: cameraImage.planes.map((plane) => plane.bytes).toList(),
+        imageHeight: cameraImage.height,
+        imageWidth: cameraImage.width,
+        iouThreshold: 0.4,
+        confThreshold: 0.4,
+        classThreshold: 0.5);
+  }
 
   @override
   Widget build(BuildContext context) {
