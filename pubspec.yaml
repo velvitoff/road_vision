@@ -30,8 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_vision: ^1.1.4
-  camera: ^0.11.0+1
+  pytorch_lite: ^4.2.5
+  camera: ^0.10.5+2
+  image_picker: ^1.1.2
   get_it: ^7.7.0
   flutter_bloc: ^8.1.6
 
@@ -64,8 +65,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/yolo8m-augmented-100epochs-73per_float16.tflite
-    - assets/yolo8m-augmented-100epochs-73per_float16.txt
+    - assets/models/
+    - assets/labels/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
