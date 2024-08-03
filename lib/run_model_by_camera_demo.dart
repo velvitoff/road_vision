@@ -5,10 +5,10 @@ import 'package:road_vision/ui/camera_view.dart';
 
 /// [RunModelByCameraDemo] stacks [CameraView] and [BoxWidget]s with bottom sheet for stats
 class RunModelByCameraDemo extends StatefulWidget {
-  const RunModelByCameraDemo({Key? key}) : super(key: key);
+  const RunModelByCameraDemo({super.key});
 
   @override
-  _RunModelByCameraDemoState createState() => _RunModelByCameraDemoState();
+  State<RunModelByCameraDemo> createState() => _RunModelByCameraDemoState();
 }
 
 class _RunModelByCameraDemoState extends State<RunModelByCameraDemo> {

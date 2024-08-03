@@ -3,17 +3,17 @@ import 'package:road_vision/run_model_by_camera_demo.dart';
 import 'package:road_vision/run_model_by_image_demo.dart';
 
 Future<void> main() async {
-  runApp(const ChooseDemo());
+  runApp(const MyApp());
 }
 
-class ChooseDemo extends StatefulWidget {
-  const ChooseDemo({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
   @override
-  State<ChooseDemo> createState() => _ChooseDemoState();
+  State<MyApp> createState() => _MyAppState();
 }
 
-class _ChooseDemoState extends State<ChooseDemo> {
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
