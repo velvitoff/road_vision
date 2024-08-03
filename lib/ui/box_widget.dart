@@ -9,11 +9,10 @@ class BoxWidget extends StatelessWidget {
   final Color? boxesColor;
   final bool showPercentage;
   const BoxWidget(
-      {Key? key,
+      {super.key,
       required this.result,
       this.boxesColor,
-      this.showPercentage = true})
-      : super(key: key);
+      this.showPercentage = true});
   @override
   Widget build(BuildContext context) {
     // Color for bounding box

@@ -154,7 +154,7 @@ class StatsRow extends StatelessWidget {
   final String title;
   final String value;
 
-  const StatsRow(this.title, this.value, {Key? key}) : super(key: key);
+  const StatsRow(this.title, this.value, {super.key});
 
   @override
   Widget build(BuildContext context) {
